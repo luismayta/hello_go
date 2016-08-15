@@ -37,33 +37,33 @@ windows:
             - gvm pkgset use hello
             - <%= ENV["EDITOR"] %>
         - pwd:
-            - pyenv activate hello_go
+            - pyenv activate hello
             - gvm pkgset use hello
         - pwd:
-            - pyenv activate hello_go
+            - pyenv activate hello
             - gvm pkgset use hello
   - python:
       layout: main-vertical
       panes:
         - python:
-            - pyenv activate hello_go
+            - pyenv activate hello
             - gvm pkgset use hello
             - ipython
   - databases:
       layout: main-vertical
       panes:
         - ls:
-            - pyenv activate hello_go
+            - pyenv activate hello
             - gvm pkgset use hello
         - ls:
-            - pyenv activate hello_go
+            - pyenv activate hello
             - gvm pkgset use hello
   - docker:
       layout: main-vertical
       panes:
         - ls:
-            - pyenv activate hello_go
+            - pyenv activate hello
             - gvm pkgset use hello
         - ls:
-            - pyenv activate hello_go
+            - pyenv activate hello
             - gvm pkgset use hello
