@@ -33,7 +33,7 @@ windows:
       layout: even-horizontal
       panes:
         - editor:
-            - pyenv activate hello_go
+            - pyenv activate hello
             - gvm pkgset use hello
             - <%= ENV["EDITOR"] %>
         - pwd:
