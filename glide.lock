@@ -1,0 +1,6 @@
+hash: 6a3ef4860a60a7f9e9e1bcc31e72aa05d71dacc33edd413e71bcbb410df9791f
+updated: 2016-08-14T21:29:24.708892006-05:00
+imports:
+- name: github.com/luismayta/stringutil
+  version: 0b7f5b43053fd943bae0fff159214fa574784ede
+devImports: []
