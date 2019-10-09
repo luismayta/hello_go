@@ -1,9 +1,0 @@
--/log
--/tmp
--/.git
--/.vagrant
--/vendor
--/auto-save-list
--*.cache
--*.pyc
--projectile-bookmarks.eld
