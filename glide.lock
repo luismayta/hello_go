@@ -1,8 +1,0 @@
-hash: 6c3aebf0332d0a964ded331614181fe66b6d03fbbeb2d6668d2b83512e5df6ec
-updated: 2019-08-24T23:45:37.728984-05:00
-imports:
-- name: github.com/go-basics/stringutils
-  version: 90afbefe53bc557647b94d6cd93e4f1434394148
-- name: github.com/luismayta/stringutil
-  version: 328e578f02a25395679498bc095e96b0987df44a
-testImports: []
