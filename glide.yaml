@@ -1,4 +1,0 @@
-package: hello
-import:
-- package: github.com/luismayta/stringutil
-- package: github.com/go-basics/stringutils
