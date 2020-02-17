@@ -3,9 +3,9 @@ package main
 import (
 	"fmt"
 
-	"github.com/luismayta/stringutil"
+	"github.com/luismayta/hello_go/greeting"
 )
 
 func main() {
-	fmt.Printf(stringutil.Reverse("!oG ,olleH"))
+	fmt.Printf(greeting.Hello())
 }
