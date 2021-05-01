@@ -3,12 +3,9 @@
 #
 # Usage: test up
 
-version: '3.6'
 services:
   app:
-    image: hello_go-app-test
-    environment: &environment
-      - STAGE=testing
+    image: luismayta-hello_go-app-test
     build:
       args:
         stage: test

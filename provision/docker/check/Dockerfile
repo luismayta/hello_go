@@ -1,6 +1,4 @@
-FROM equipindustry/python:3.8.0-slim
-
-MAINTAINER Luis Mayta <@slovacus>
+FROM hadenlabs/python:3.8.0-slim
 
 ARG stage
 LABEL NAME hello_go-check-$stage
@@ -13,10 +11,10 @@ WORKDIR /usr/src/
 RUN apt-get update -y \
   && apt-get -y install --no-install-recommends \
   # tools validation
-  git-core \
+  git \
   shellcheck \
   # install python dependencies
-  && pip3 install pipenv \
+  && pip3 install --no-cache-dir pipenv \
   && pipenv install --dev --skip-lock \
   && pipenv shell --fancy \
   && apt-get purge \

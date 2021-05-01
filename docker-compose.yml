@@ -2,16 +2,25 @@
 # https://docs.docker.com/compose/
 # Usage: docker-compose up
 ---
-version: '3.6'
+version: '3.7'
 
 services:
   app:
+    ports:
+      - '8080:8080'
     build:
       context: .
       dockerfile: provision/docker/app/Dockerfile
-    environment: &environment
-      - STAGE=dev
     volumes:
-      - .:/usr/src
+      - .:/usr/src/github.com/luismayta/hello_go
+    env_file:
+      - .env
+
+  builder:
+    build:
+      context: .
+      dockerfile: provision/docker/builder/Dockerfile
+    volumes:
+      - .:/usr/src/github.com/luismayta/hello_go
     env_file:
       - .env

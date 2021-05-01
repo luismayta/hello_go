@@ -1,40 +1,41 @@
-FROM equipindustry/python:3.8.0-slim
-
-MAINTAINER Luis Mayta <@slovacus>
+FROM golang:1.14.2-alpine
 
 ARG stage
+ARG GORELEASER_VERSION=0.140.0
 
-LABEL NAME hello_go-app-$stage
+LABEL NAME luismayta-hello_go-app-$stage
 
 ENV USERNAME developer
-ENV PACKAGES bash \
-  openssl
 
+ENV PACKAGES git \
+        bash \
+        curl \
+        make \
+        netcat-openbsd
 
-COPY Pipfile* /usr/src/
+# Set ENV variables
+ENV REPO_URL=github.com/luismayta/hello_go
+ENV GOPATH=/usr/src
+env GO_VERSION=1.14.2
+env BUILT_BY=$(whoami)-$(hostname)
+ENV APP_PATH=${GOPATH}/${REPO_URL}
+ENV WORK_PATH=${APP_PATH}
 
-# set working directory to /usr/src/
-WORKDIR /usr/src/
+# Set working directory
+WORKDIR ${WORK_PATH}
 
-RUN apt-get update -y \
-  && apt-get install -y ${PACKAGES} --no-install-recommends \
+# Copy all the application files
+COPY . .
 
-  # Permissions
-  && groupadd -g 500 -r python \
-  && groupadd ${USERNAME} \
-  && useradd -m -g ${USERNAME} -G python ${USERNAME} \
-  && chown -R ${USERNAME}:python /usr/local/bin \
-  && su ${USERNAME} \
-  && mkdir -p /usr/src \
-  && chown -R ${USERNAME} /usr/src \
+RUN apk --no-cache add ${PACKAGES} \
+    && curl -L https://github.com/goreleaser/goreleaser/releases/download/v${GORELEASER_VERSION}/goreleaser_Linux_x86_64.tar.gz | tar xz -C ./bin/ \
+    # application
+    && go mod download \
+    && bin/goreleaser build --snapshot --rm-dist \
+    && rm -rf  /var/cache/apk/*
 
-  # python
-  && pip3 install pipenv \
-  && pipenv install --dev --skip-lock \
-  && pipenv shell --fancy \
+# Expose port 8080 to the outside world
+EXPOSE 8080
 
-  # clean
-  && apt-get clean \
-  && apt-get autoremove \
-  && apt-get purge \
-  && rm -rf /var/lib/apt/lists/*
+# Command to run the executable
+CMD ["./dist/default_linux_amd64/core"]
