@@ -1,25 +1,21 @@
 # Docker Compose
 # https://docs.docker.com/compose/
-version: '3.6'
+
 services:
-  # Python
   app:
-    environment: &environment
-      - STAGE=local
-    image: hello_go-app-dev
+    image: luismayta-hello_go-app-dev
     build:
       args:
         stage: dev
 
   check:
-    image: hello_go-check-dev
-    environment: *environment
+    image: luismayta-hello_go-check-dev
     build:
       context: .
       dockerfile: provision/docker/check/Dockerfile
       args:
         stage: dev
     volumes:
-      - .:/usr/src
+      - .:/usr/src/github.com/luismayta/hello_go
     env_file:
       - .env
