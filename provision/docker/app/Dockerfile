@@ -1,4 +1,4 @@
-FROM golang:1.14.2-alpine
+FROM golang:1.16-alpine
 
 ARG stage
 ARG GORELEASER_VERSION=0.140.0
@@ -16,7 +16,7 @@ ENV PACKAGES git \
 # Set ENV variables
 ENV REPO_URL=github.com/luismayta/hello_go
 ENV GOPATH=/usr/src
-env GO_VERSION=1.14.2
+env GO_VERSION=1.16
 env BUILT_BY=$(whoami)-$(hostname)
 ENV APP_PATH=${GOPATH}/${REPO_URL}
 ENV WORK_PATH=${APP_PATH}
