@@ -1,0 +1,45 @@
+---
+#
+# This is the canonical configuration for the `README.md`
+# Run `make readme` to rebuild the `README.md`
+#
+
+# Name of this project
+name: hello_go
+
+email:
+  support: support@hadenlabs.com
+
+# Logo for this project
+#logo: docs/logo.png
+
+# License of this project
+license: 'LGPL-3.0'
+
+# Canonical GitHub repo
+github_repo: luismayta/hello_go
+
+# Badges to display
+badges:
+  - name: GitHub tag (latest SemVer)
+    image: https://img.shields.io/github/v/tag/luismayta/hello_go?label=latest&sort=semver
+    url: https://github.com/luismayta/hello_go/releases
+  - name: Lint
+    image: https://img.shields.io/github/workflow/status/luismayta/hello_go/lint-code
+    url: https://github.com/luismayta/hello_go/actions
+  - name: Issues
+    image: https://img.shields.io/github/issues/luismayta/hello_go
+    url: https://github.com/luismayta/hello_go/issues
+  - name: Latest Release
+    image: https://img.shields.io/github/release/luismayta/hello_go
+    url: https://github.com/luismayta/hello_go/releases
+  - name: Conventional Commits
+    image: https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow
+    url: https://conventionalcommits.org
+  - name: KeepAChangelog
+    image: https://img.shields.io/badge/Keep%20A%20Changelog-1.0.0-%23E05735
+    url: https://keepachangelog.com
+
+# Short description of this project
+description: |-
+  hello_go load and set env to terminal.
