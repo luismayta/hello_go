@@ -54,7 +54,7 @@
   "dependencies": {},
   "devDependencies": {
     "@babel/eslint-parser": "^7.13.14",
-    "@commitlint/cli": "^12.1.2",
+    "@commitlint/cli": "^12.1.4",
     "@hadenlabs/commitlint-config": "^0.1.0",
     "@types/chai": "^4.2.17",
     "@types/mocha": "^8.2.2",
