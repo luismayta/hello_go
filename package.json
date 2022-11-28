@@ -75,7 +75,7 @@
     "prettier-tslint": "^0.4.2",
     "mocha": "^10.1.0",
     "rimraf": "^3.0.2",
-    "sinon": "^14.0.2",
+    "sinon": "^15.0.0",
     "semantic-release": "^19.0.5",
     "shelljs": "^0.8.5",
     "slugify": "^1.6.5",
