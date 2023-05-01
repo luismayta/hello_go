@@ -930,7 +930,7 @@
     "@tufjs/canonical-json" "1.0.0"
     minimatch "^7.4.6"
 
-"@types/chai@^4.3.4":
+"@types/chai@^4.3.5":
   version "4.3.5"
   resolved "https://registry.yarnpkg.com/@types/chai/-/chai-4.3.5.tgz#ae69bcbb1bebb68c4ac0b11e9d8ed04526b3562b"
   integrity sha512-mEo1sAde+UCE6b2hxn332f1g1E8WfYRu6p5SvTKr2ZKC1f7gFJXk4h5PyGP9Dt6gCaG8y8XhwnXWC6Iy2cmBng==
