@@ -76,7 +76,7 @@
     "mocha": "^10.2.0",
     "rimraf": "^5.0.1",
     "sinon": "^16.0.0",
-    "semantic-release": "^22.0.0",
+    "semantic-release": "^22.0.1",
     "shelljs": "^0.8.5",
     "slugify": "^1.6.6",
     "stylelint": "^15.10.3",
