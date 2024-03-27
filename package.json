@@ -73,7 +73,7 @@
     "lint-staged": "^15.2.2",
     "prettier": "^3.2.5",
     "prettier-tslint": "^0.4.2",
-    "mocha": "^10.3.0",
+    "mocha": "^10.4.0",
     "rimraf": "^5.0.5",
     "sinon": "^17.0.1",
     "semantic-release": "^23.0.6",
