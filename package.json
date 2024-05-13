@@ -74,7 +74,7 @@
     "prettier": "^3.2.5",
     "prettier-tslint": "^0.4.2",
     "mocha": "^10.4.0",
-    "rimraf": "^5.0.6",
+    "rimraf": "^5.0.7",
     "sinon": "^17.0.2",
     "semantic-release": "^23.1.1",
     "shelljs": "^0.8.5",
