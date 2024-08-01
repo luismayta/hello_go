@@ -56,7 +56,7 @@
     "@babel/eslint-parser": "^7.25.1",
     "@commitlint/cli": "^19.3.0",
     "@hadenlabs/commitlint-config": "^0.1.0",
-    "@types/chai": "^4.3.16",
+    "@types/chai": "^4.3.17",
     "@types/mocha": "^10.0.7",
     "@types/rimraf": "^4.0.5",
     "@typescript-eslint/eslint-plugin": "^8.0.0",
