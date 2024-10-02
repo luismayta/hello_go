@@ -53,7 +53,7 @@
   "homepage": "https://github.com/luismayta/hello_go#readme",
   "dependencies": {},
   "devDependencies": {
-    "@babel/eslint-parser": "^7.25.1",
+    "@babel/eslint-parser": "^7.25.7",
     "@commitlint/cli": "^19.5.0",
     "@hadenlabs/commitlint-config": "^0.1.0",
     "@types/chai": "^5.0.0",
